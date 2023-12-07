@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './index.scss'
 import { NavLink } from 'react-router-dom'
+import { BasketContext } from '../Context/basket'
 
 const Navbar = () => {
+    const {basket} = useContext(BasketContext)
     return (
         <div className='navbar'>
             <div className="navbar_container">
@@ -75,7 +77,17 @@ const Navbar = () => {
                 </div>
                 <div className="nav_icons">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <NavLink
+                        to="/basket"
+                        style={({ isActive }) => {
+                            return {
+                                color: isActive ? "#71CD13" : "black",
+                            };
+                        }}
+                    >
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <sup>{basket.length ? basket.length : ""}</sup>
+                    </NavLink>
                     <i class="fa-regular fa-user"></i>
                     <i class="fa-regular fa-heart"></i>
                 </div>

@@ -1,35 +1,49 @@
-.navbar{
+.navbar {
     max-width: 100%;
-    box-shadow: 0px 3px 16px 0px rgba(0,0,0,0.1);
-    &_container{
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+
+    &_container {
         max-width: 60%;
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
         height: 80px;
         align-items: center;
-        .navmenu{
-            ul{
+
+        .navmenu {
+            ul {
                 display: flex;
                 font-size: 14px;
                 gap: 20px;
-                li{
+
+                li {
                     font-weight: 600;
                     transition: 300ms;
-                    a{
-                        &:hover{
+
+                    a {
+                        &:hover {
                             color: #71CD13;
                         }
                     }
                 }
             }
         }
-        .nav_icons{
-            i{
+
+        .nav_icons {
+            .fa-cart-shopping {
+                padding: 0px !important;
+            }
+
+            .fa-user {
+                padding-left: 20px;
+            }
+
+            i {
                 padding-right: 20px;
                 cursor: pointer;
                 transition: 300ms;
-                &:hover{
+
+                &:hover {
                     color: #71CD13;
                 }
             }
