@@ -1,0 +1,98 @@
+.productDetail {
+    max-width: 100%;
+
+    .productDetailCard {
+        max-width: 60%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 50px;
+
+        .cardList {
+            box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+            width: 900px;
+            height: 350px;
+            display: flex;
+            position: relative;
+
+            .cardImgDiv {
+                width: 30%;
+                height: 300px;
+                margin: 20px;
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+
+            .productDetailCardText {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                margin-left: 40px;
+                width: 50%;
+
+                .title {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #65B741;
+                }
+
+                .category {
+                    color: #004225;
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+
+                .description {
+                    color: #004225;
+                    font-size: 17px;
+                }
+
+                .price {
+                    font-weight: 600;
+                    font-size: 18px;
+
+                    span {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+
+            .fa-cart-shopping {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                cursor: pointer;
+                transition: 300ms;
+                font-size: 20px;
+                border: 2px solid #71CD13;
+                padding: 10px;
+                border-radius: 50%;
+                background-color: #70cd134b;
+                &:hover {
+                    color: #71CD13;
+                }
+
+            }
+            .fa-heart {
+                position: absolute;
+                top: 80px;
+                right: 30px;
+                cursor: pointer;
+                transition: 300ms;
+                font-size: 20px;
+                border: 2px solid #71CD13;
+                padding: 10px;
+                border-radius: 50%;
+                background-color: #70cd134b;
+                &:hover {
+                    color: #71CD13;
+                }
+
+            }
+        }
+    }
+}

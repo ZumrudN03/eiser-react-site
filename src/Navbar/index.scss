@@ -30,12 +30,22 @@
         }
 
         .nav_icons {
+            .input{
+                margin-right: 10px;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #1A5D1A;
+                color: #71CD13;
+            }
             .fa-cart-shopping {
                 padding: 0px !important;
             }
 
             .fa-user {
                 padding-left: 20px;
+            }
+            .fa-heart{
+                padding: 0px !important;
             }
 
             i {

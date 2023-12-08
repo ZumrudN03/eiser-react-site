@@ -2,9 +2,13 @@ import React, { useContext } from 'react'
 import './index.scss'
 import { NavLink } from 'react-router-dom'
 import { BasketContext } from '../Context/basket'
+import { WishlistContext } from '../Context/wishlist'
+import { SearchContext } from '../Context/search'
 
 const Navbar = () => {
-    const {basket} = useContext(BasketContext)
+    const { basket } = useContext(BasketContext)
+    const {wishlist} =useContext(WishlistContext)
+    const {handleSearch} = useContext(SearchContext)
     return (
         <div className='navbar'>
             <div className="navbar_container">
@@ -76,6 +80,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="nav_icons">
+                    <input className='input' type="text" onChange={(e)=>handleSearch(e)} />
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <NavLink
                         to="/basket"
@@ -89,7 +94,18 @@ const Navbar = () => {
                         <sup>{basket.length ? basket.length : ""}</sup>
                     </NavLink>
                     <i class="fa-regular fa-user"></i>
-                    <i class="fa-regular fa-heart"></i>
+                    <NavLink
+                        to="/wishlist"
+                        style={({ isActive }) => {
+                            return {
+                                color: isActive ? "#71CD13" : "black",
+                            };
+                        }}
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                        <sup>{wishlist.length ? wishlist.length : ""}</sup>
+                    </NavLink>
+                    
                 </div>
             </div>
 
